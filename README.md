@@ -87,6 +87,9 @@ Especially the hexaleafs marked with 3 and 4 are important, because they each co
 Another layout I came up with after finishing this project looks like this:
 ![led-strip layout 02](./img/led_layout_02.png)
 
+Also, here is a example for a completely different layout, I came up with:
+![hexaleaf layout alternative 01](./img/layout_alt_01.png)
+
 Example for a Y-splitter with additional power injection, where the middle pin is Data and the outer pins are 5V and GND
 ![y-splitter with additional power injection](./img/y_splitter_power_injection.jpg)
 
