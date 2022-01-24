@@ -28,27 +28,34 @@
 
 ### Parts to print
 #### White:
-- 14x body.stl
-- ~70x connector – c 0.2.stl
-- ~60x connectorBlind – c 0.2.stl
-- 1x rhombusBody – no electronics.stl
-- 1x rhombusBody – with electronics.stl
-- 2x rhombusFace – 0.8mm.stl
+- 14x [body.stl](./stl/clearance_0.3mm/body.stl)
+- ~70x [connector_c_0.1mm_default.stl](./stl/clearance_0.3mm/connector_c_0.1mm_default.stl)
+- ~60x [connectorBlind_c_0.1mm_default.stl](./stl/clearance_0.3mm/connectorBlind_c_0.1mm_default.stl)
+- 1x [rhombusBody_no_electronics.stl](./stl/clearance_0.3mm/rhombusBody_no_electronics.stl)
+- 1x [rhombusBody_with_electronics.stl](./stl/clearance_0.3mm/rhombusBody_with_electronics.stl)
+- 2x [rhombusFace_0.8mm.stl](./stl/clearance_0.3mm/rhombusFace_0.8mm.stl)
 
 #### Black:
-- 4x cap 111111.stl
-- 3x cap 011111.stl
-- 2x cap 001111.stl
-- 5x cap 000111.stl
-- 1x rhombusCap – no electronics.stl
-- 1x rhombusCap – with electronics.stl
-- 2x rhombusFace – 0.8mm.stl
+- 4x [cap_111111.stl](./stl/clearance_0.3mm/cap_111111.stl)
+- 3x [cap_011111.stl](./stl/clearance_0.3mm/cap_011111.stl)
+- 2x [cap_001111.stl](./stl/clearance_0.3mm/cap_001111.stl)
+- 5x [cap_000111.stl](./stl/clearance_0.3mm/cap_000111.stl)
+- 1x [rhombusCap_no_electronics.stl](./stl/clearance_0.3mm/rhombusCap_no_electronics.stl)
+- 1x [rhombusCap_with_electronics.stl](./stl/clearance_0.3mm/rhombusCap_with_electronics.stl)
+- 2x [rhombusFace_0.8mm.stl](./stl/clearance_0.3mm/rhombusFace_0.8mm.stl)
 
 #### Clear:
-- 14x diffusor – 5mm.stl
-- 14x face 0.8mm.stl
-- 14x spacer.stl
-- 2x rhombusFace – 0.8mm.stl
+- 14x [diffusor_5mm.stl](./stl/clearance_0.3mm/diffusor_5mm.stl)
+- 14x [face_0.8mm.stl](./stl/clearance_0.3mm/face_0.8mm.stl)
+- 14x [spacer_0.8mm.stl](./stl/clearance_0.3mm/spacer_0.8mm.stl)
+- 2x [rhombusFace_0.8mm.stl](./stl/clearance_0.3mm/rhombusFace_0.8mm.stl)
+
+### Print settings
+#### Default
+Most of the parts don't require specific settings. Just use your default profile.
+
+#### Diffusor
+When printing the diffusor, make sure, to set the infill to 50% rectlinear. This way you get a proper diffusion.
 
 ---
 ## Structure of a Hexaleaf
