@@ -3,7 +3,7 @@
 
 ## Aim
 - Selfmade Nanoleaf-like lamp-thingy :)
-- Good light diffusion with invislbe LED-spots
+- Good light diffusion with invisible LED-spots
 - Print as many parts as possible using a 3d printer
 
 ## My result
@@ -12,7 +12,7 @@
 - Easy setup using WLED
 
 ## BOM for building the Hexaleafs as shown in the pictures
-### Party to buy
+### Parts to buy
 - WS2812B LED-Strip with white PCB and 30 or 60 LEDs/m. Length depending on your design (30 LEDs/m = 12 LEDs per hex, 60 LEDs/m = 24 LEDs per hex. In my case I used a 5m and a 1m strip of these 60LEDs/m strips: https://www.amazon.de/gp/product/B01CDTEG1O/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 - Black Filament (I used this PETG: https://www.dasfilament.de/filament-spulen/petg-1-75-mm/158/petg-filament-1-75-mm-schwarz)
 - White Filament (I used this PETG: https://www.dasfilament.de/filament-spulen/petg-1-75-mm/157/petg-filament-1-75-mm-weiss)
@@ -69,11 +69,11 @@ The whole assembly is held toghether by the connectors, unused connector slots a
 
 
 ## LED-Strip-Connections
-For smooth animations and effects using WLED and the layout shown here, it's important to have a quite symmetrical layout for the LED-strips.
-The trick used here, is wiring some of the strips in parallel, so the respective hexaleafs always perform the same effects.
+For smooth animations and effects using WLED and the layout shown here, it's important to have a symmetrical layout for the LED-strips.
+The trick used here is wiring some of the strips in parallel, so the respective hexaleafs always perform the same effects.
 
 The connection-layout I used looks as follows
-Especially the hexaleafs marked with 3 and 4 are important, because the each contain a split, where the strips are wired in parallel.
+Especially the hexaleafs marked with 3 and 4 are important, because they each contain a split, where the strips start to be wired in parallel.
 - Caution! The parallel connection of the following LED-strips must occur at the output of the respective hexaleafs LED-strip, not on the input side.
 ![led-strip layout 01](./img/led_layout_01.png)
 
@@ -96,7 +96,7 @@ Example for a Y-splitter with additional power injection, where the middle pin i
 - 12x connectors (blind) – amount of blind and standard connectors depends on amount of connected hexes
 
 #### Black:
-- 1x cap xxxxxx.stl (which cap depends on connected hexes, 0 = no outlets to next hex, 1 = includes outlets to next hex)
+- 1x cap xxxxxx.stl (which stl file depends on connected hexes, 0 = no outlets to next hex, 1 = includes outlets to next hex)
 
 #### Clear:
 - 1x diffusor – 5mm.stl
