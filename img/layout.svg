@@ -434,10 +434,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.38507815"
-     inkscape:cx="333.64596"
-     inkscape:cy="533.45016"
+     inkscape:cx="268.60378"
+     inkscape:cy="538.52587"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="false"
      units="mm"
      inkscape:pagecheckerboard="true"
@@ -465,7 +465,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,1.5113525e-5)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        sodipodi:type="star"
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1107,8 +1108,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Verbindungsreihenfolge LED-Streifen 01"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:1.25;font-family:consolas;-inkscape-font-specification:consolas;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"

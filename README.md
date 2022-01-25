@@ -67,7 +67,7 @@ Most of the parts don't require specific settings. Just use your default profile
 When printing the diffusor, make sure, to set the infill to 50% rectlinear. This way you get a proper diffusion.
 
 ---
-## Structure of a Hexaleaf
+## General Structure of a Hexaleaf
 The printed body with its LED strip already inserted
 ![hexaleaf body with inserted LED strip](./img/body_led.jpg)
 
@@ -84,12 +84,32 @@ The whole assembly is held toghether by the connectors, unused connector slots a
 ![connectors blind](./img/connectors_blind.jpg)
 
 
+## LED-Strip & body preparation
+To get your LED-Strips ready, they need to be cut, have wires soldered on and finally be bent.
+1. Cut your strip in pieces of 12 (@30LEDs/m) or 24 (@60LEDs/m) LEDs each. You need as many strip-pieces, as you have bodies. **Caution!** The long LED strips you can buy, are made up of several shorter strips, that are soldered together. These solder joints can't get bent and are a severe problem, if they occur in one of the corners of a hexaleaf. To prevent this issue, I checked my strips before cutting them. Count the number of LEDs from the beginning of the strip to the first joint, where two strips are soldered together. If the number is even, remove the first LED from your strip. This way, the solder joints will never be in a corner and, if you have a 60 LEDs/m strip, also never be at one of the posts, holding the strip in place.
+2. Prepare 6 strips of wire with a length of 10-11cm, using the white wire. Strip the insulation on one side for about 3-5mm, so can solder the wire easily to the pads on the LED-strips. On the other side, remove just a little bit of shielding (~2mm) as preparation for the crimping. Coat the side with more insulation removed with a nice layer of tin and crimp a DuPont-connector to the other side. In the end, you'll need 3 male and 3 female connectors. Don't add the connector housing yet, as the wires are easier to solder to the strip without it.
+3. Solder the 3 wires with the **male** DuPont-connectors to the **input side** of your LED-strip pieces. On most of the strips, the input side is marked with DI, while the output is marked with DO (besides VCC and GND). You can also recognize the input by the little arrow, printed on the pcb. If it points away from the solder pads, it's the input side, if it points towards the solder pads, it's the output side. After you finished the input-side, solder the remaining 3 wires, with the **female** DuPont-connectors, to the **output side** of the strip.
+4. Insert the 3 male, as well as the 3 female connectors in a 3-pin-housing each. When doing this step, make sure you are using the same wire order for each and every connector. My connector housings had a little arrow embedded on one of the outermost pins. So I build up every connector by inserting GND into the slot with the arrow, the Data-Pin into the center slot and finally VCC into the remaining slot. This way, when connecting the hexaleafs later on, you can be sure which pin is which and don't get confused. Just plug "the arrows" together :)
+5. After the wires are soldered to the strip, it's a good idea to pre-bend your strip. This makes the assembly way easier. To do this, use a ruler and, depending on your strip type, count 2 (30 LEDs/m) or 4 (60 LEDs/m) LEDs from the beginning of the strip. Place the edge of the ruler on the middle of the solder pads, that come **after** the 2nd/4th LED, with the LEDs facing towards you. Now bend the strip upwards and toward you. Repeat this until you made 5 bends.
+Your strip should now look something like this: ![prepared led strip](./img/led_strip_prepared.jpg)
+6. Insert the finished LED strip in one of your prepared bodies. While doing so, you'll notice, that the beginning and end of each strip doesn't fit that well, because of the solder joints where the wires are attached. To circumvent this issue, simply bend the strips here as well, so that your finished body looks like this: ![hexaleaf body with inserted LED strip](./img/body_led.jpg)
+7. Repeat for each of the LED strip pieces/bodies you need.
+
+## Combining the bodies / assembling the layout
+1. Lay out the prepared body-parts in the layout you want to use. While doing so, make sure, that the start/end-corner (where each strip starts and ends) of each hexaleaf is facing the same direction. This way, the effects, the hexaleafs will play later on, will all start in the same spot of each hexaleaf and travel in the same way through each hexaleaf, as well as through your layout. In my case, I put all start/end-corners to the lower right, as I felt it looked the nicest. Also, don't forget to include the [rhombusBody_with_electronics](./stl/clearance_0.3mm/rhombusBody_with_electronics.stl) in your layout, as it is mandatory for storing the ESP.
+2. Now start by taking one of the layed out bodies and insert 2 of the printed [connectors](./stl/clearance_0.3mm/connector_c_0.1mm_default.stl) on each side, where another body or a rhombus body will be connected. I inserted the connectors from the bottom, without turning the respective body around. This way, I made sure I don't accidentially rotate something or make any other layout-mistakes.
+3. Now take one of the bodies, that should connect to the one you just prepared and just clip them together. After this, add the connectors to this new body, as needed. It might look something like this: ![body with rhombus body connected](./img/body_first_connections.jpg) And later like this: ![most of the bodies connected to form the final layout](./img/body_most_connections_done.jpg)
+4. Work your way through the whole layout, until all bodies are connected.
+5. As soon as all bodies are connected, you can turn the whole thing around to make sure all connectors are sitting tight and flat. If some of the connectors are sticking out a bit, push them in, so the surface of the back gets nice and flat. Also, put [blind connectors](./stl/clearance_0.3mm/connectorBlind_c_0.1mm_default.stl) and all the remaining connector slots. This way, you minimize light leakage in the finished assembly. My finnished assembly looked like this from the back: ![layout finished from the back](./img/layout_finished_back.jpg) With nice and flat connectors: ![connectors from the back](./img/connectors_back.jpg)
+6. You can now turn the whole assembly around again and start working on the LED-Strip connections.
+
+
 ## LED-Strip-Connections
 For smooth animations and effects using WLED and the layout shown here, it's important to have a symmetrical layout for the LED-strips.
 The trick used here is wiring some of the strips in parallel, so the respective hexaleafs always perform the same effects.
 
-The connection-layout I used looks as follows
-Especially the hexaleafs marked with 3 and 4 are important, because they each contain a split, where the strips start to be wired in parallel.
+### The connection-layout I used looks as follows
+The numbers and arrows within the single hexaleafs show the connection-order. So hexaleaf 1 is connected to 2, hexaleaf 2 to 3 and so on. Especially the hexaleaf marked with 3 and the upper one marked with 4 are important, because they each contain a split, where the strips start to be wired in parallel (as shown by 2 or 3 arrows pointing to the next hexaleafs).
 - Caution! The parallel connection of the following LED-strips must occur at the output of the respective hexaleafs LED-strip, not on the input side.
 ![led-strip layout 01](./img/led_layout_01.png)
 
