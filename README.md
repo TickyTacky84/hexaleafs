@@ -35,6 +35,10 @@
 - 1x [rhombusBody_with_electronics.stl](./stl/clearance_0.3mm/rhombusBody_with_electronics.stl)
 - 2x [rhombusFace_0.8mm.stl](./stl/clearance_0.3mm/rhombusFace_0.8mm.stl)
 
+**Additional information:**
+The mm-value in the filename of the connectors show the clearance of these components. 0.1mm was the value I used so that the connectors are a snug fit. You might need to use a different file here. Example: connectorBlind_c_0.1mm_default.stl - 0.1mm clearance.
+**connectorBlind** is used only to block light on the outer leafs of your structure.
+
 #### Black:
 - 4x [cap_111111.stl](./stl/clearance_0.3mm/cap_111111.stl)
 - 3x [cap_011111.stl](./stl/clearance_0.3mm/cap_011111.stl)
@@ -44,8 +48,13 @@
 - 1x [rhombusCap_with_electronics.stl](./stl/clearance_0.3mm/rhombusCap_with_electronics.stl)
 - 2x [rhombusFace_0.8mm.stl](./stl/clearance_0.3mm/rhombusFace_0.8mm.stl)
 
+Additional information:
+The cap uses a bit masking in the filename. There are 6 sides of the cap. If the side covers the holes of the base there will be a 0 in the filename. If the holes are not covered and thus usable there will be a 1.
+Example: cap_111111.stl - all 6 sides are accessible / cap_000111.stl - 3 sides are covered, 3 sides are accessible
+This is important as you do not want open holes at the edge of your structure as it may leak light.
+
 #### Clear:
-- 14x [diffusor_5mm.stl](./stl/clearance_0.3mm/diffusor_5mm.stl)
+- 14x [diffusor_5mm.stl](./stl/clearance_0.3mm/diffusor_5mm.stl) - !! 50% infill, rectlinear infill pattern !!
 - 14x [face_0.8mm.stl](./stl/clearance_0.3mm/face_0.8mm.stl)
 - 14x [spacer_0.8mm.stl](./stl/clearance_0.3mm/spacer_0.8mm.stl)
 - 2x [rhombusFace_0.8mm.stl](./stl/clearance_0.3mm/rhombusFace_0.8mm.stl)
@@ -96,7 +105,7 @@ Example for a Y-splitter with additional power injection, where the middle pin i
 
 ## Parts needed for one hexaleaf
 #### Electronics:
-- LED-strip (12 LEDs @ 30 LEDs/m, 24 LEDs @ 60 LEDs/m)
+- LED-strip (12 LEDs @ 30 LEDs/m, 24 LEDs @ 60 LEDs/m) - obviously 60 LEDs/m is much brighter
 - 2x 3-Pin DuPont-Connector
 - (Optional) Y-splitter to connect LED-strips in parallel
 - (Optional) Power-Adapter to inject 5V to various points in your design
