@@ -92,7 +92,7 @@ To get your LED-Strips ready, they need to be cut, have wires soldered on and fi
 4. Insert the 3 male, as well as the 3 female connectors in a 3-pin-housing each. When doing this step, make sure you are using the same wire order for each and every connector. My connector housings had a little arrow embedded on one of the outermost pins. So I build up every connector by inserting GND into the slot with the arrow, the Data-Pin into the center slot and finally VCC into the remaining slot. This way, when connecting the hexaleafs later on, you can be sure which pin is which and don't get confused. Just plug "the arrows" together :)
 5. After the wires are soldered to the strip, it's a good idea to pre-bend your strip. This makes the assembly way easier. To do this, use a ruler and, depending on your strip type, count 2 (30 LEDs/m) or 4 (60 LEDs/m) LEDs from the beginning of the strip. Place the edge of the ruler on the middle of the solder pads, that come **after** the 2nd/4th LED, with the LEDs facing towards you. Now bend the strip upwards and toward you. Repeat this until you made 5 bends.
 Your strip should now look something like this: ![prepared led strip](./img/led_strip_prepared.jpg)
-6. Insert the finished LED strip in one of your prepared bodies. While doing so, you'll notice, that the beginning and end of each strip doesn't fit that well, because of the solder joints where the wires are attached. To circumvent this issue, simply bend the strips here as well, so that your finished body looks like this: ![hexaleaf body with inserted LED strip](./img/body_led.jpg)
+6. Insert the finished LED strip in one of your prepared bodies. Make sure, to insert each and every strip in the same direction. From input to output go either clockwise or counter-clockwise around the body, but don't mix up both directions in different bodies! While doing so, you'll notice, that the beginning and end of each strip doesn't fit that well, because of the solder joints where the wires are attached. To circumvent this issue, simply bend the strips here as well, so that your finished body looks like this: ![hexaleaf body with inserted LED strip](./img/body_led.jpg)
 7. Repeat for each of the LED strip pieces/bodies you need.
 
 ## Combining the bodies / assembling the layout
@@ -108,19 +108,31 @@ Your strip should now look something like this: ![prepared led strip](./img/led_
 For smooth animations and effects using WLED and the layout shown here, it's important to have a symmetrical layout for the LED-strips.
 The trick used here is wiring some of the strips in parallel, so the respective hexaleafs always perform the same effects.
 
-### The connection-layout I used looks as follows
-The numbers and arrows within the single hexaleafs show the connection-order. So hexaleaf 1 is connected to 2, hexaleaf 2 to 3 and so on. Especially the hexaleaf marked with 3 and the upper one marked with 4 are important, because they each contain a split, where the strips start to be wired in parallel (as shown by 2 or 3 arrows pointing to the next hexaleafs).
-- Caution! The parallel connection of the following LED-strips must occur at the output of the respective hexaleafs LED-strip, not on the input side.
-![led-strip layout 01](./img/led_layout_01.png)
+### Y-splitters
+The y-splitters are needed, to wire the strips in parallel and also offer a good opportunity to inject some more power.
+Here is an example of a y-splitter with additional power injection.
+![y-splitter with additional power injection](./img/y_splitter_power_injection.jpg)
+To build such a splitter with power injection, you'll need 5 wires of ~4-5cm length for the input connector, as well as 3 wires of the same length for each output connector. Make sure to have your wires as short as possible, as this helps with hiding the splitter later on and minimizing its visible shadow in the finished hexaleaf. Strip one side of each wire for about 1cm and the opposite side for a few millimeters, so you can crimp on the connectors.  
+Because the connection scheme used here, uses male plugs as inputs and female plugs as outputs, your splitter has to follow this rule too. Crimp 5 cables with male and the remainder with female DuPont connectors. As with the LED-Strips, you want to solder the wires together, before you add the connector housings. This doesn't just make soldering easier, but also enables you to apply heatshrink tubing, after you are finished with soldering.
+Now you need to connect one of the input wires with n of the output wires, where n equals the number of outputs your splitter shall have. To make it easier, I bundled all of the input wires and twisted the stripped parts. After that, coat the stripped parts with some solder. If you are working on the Data-Line of your splitter, then take one, else two of the wires with the male DuPont-connectors and repeat the process of twisting them together and applying a coat of solder. Now you should be easily able to solder the two already coated parts together. After soldering, make sure to add some heatshrink tubing, to make sure the magic smoke stays inside of your electronics :)  
+After preparing the wires for Data, GND and 5V of your splitter, you can add the housings. As with the LED-strips itself, the middle pin is Data and the outer pins are 5V and GND. Also make sure to follow the "arrow-rule" mentioned earlier and plug the GND-pins in the housing-slots on the side with the arrow and the 5V pins in the slots on the opposite side.
 
-Another layout I came up with after finishing this project looks like this:
+### Connection-layout
+After alle the bodies are interconnected, you can start connecting the individual LED-strips. This step is very important, as it defines in which order your animations and effects will run over the whole layout.
+The following image shows the connection scheme. The numbers and arrows within the single hexaleafs show the connection-order. So hexaleaf 1 is connected to 2, hexaleaf 2 to 3 and so on. Especially the hexaleaf marked with 3 and the upper one marked with 4 are important, because they each contain a split, where the strips start to be wired in parallel (as shown by 2 or 3 arrows pointing outward to the next hexaleafs).
+![led-strip layout 01](./img/led_layout_01.png)
+The Rhombus in the bottom right corner is where your connection starts. It contains the male DuPont-plug, which will later get connected to your supply voltage and the ESP. The output of the corresponding strip is then connected to the strip-input of the hexaleaf above. The second LED-strips output is again connected to the input of the hexaleaf above, and so on.  
+When following the layout shown here, the third hexaleaf is the point where you'll need your first y-splitter. Make sure to add the y-splitter at the **output** of the corresponding LED-strip and **not on the input**! For now, just don't mind the extra power injections on the splitters, as you'll connect them later on. Here is a closer look at the connections of the y-splitters:
+![closeup of y-splitters](./img/layout_closeup_y_splitters.jpg)
+Now work your way through the whole layout, until all LED-strips are connected to each other. Your result should look something like this:
+![interconnected bodies with finished wiring](./img/layout_wired.jpg)
+
+### Other possible (connection-)layouts
+Another connection-layout I came up with after finishing this project looks like this:
 ![led-strip layout 02](./img/led_layout_02.png)
 
-Also, here is a example for a completely different layout, I came up with:
+Also, here is an example for a completely different layout:
 ![hexaleaf layout alternative 01](./img/layout_alt_01.png)
-
-Example for a Y-splitter with additional power injection, where the middle pin is Data and the outer pins are 5V and GND
-![y-splitter with additional power injection](./img/y_splitter_power_injection.jpg)
 
 
 ## Parts needed for one hexaleaf
