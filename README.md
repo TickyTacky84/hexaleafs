@@ -182,7 +182,7 @@ After hitting "Save", all your LEDs should be showing a bright orange color.
 To finish everything up, insert the diffusors into all the hexaleafs. Make sure that the flat side of the diffusor points towards you, or they won't work properly (took me ages to find out). If you have to remove a diffusor again, you can use some duct tape to aid you, just like shown here:
 ![diffusor removal with duct tape](./img/diffusor_removal.jpg)
 After inserting the diffusors, add a spacer to each hexaleaf, to make sure the diffusor stays in place.  
-Finally, insert a face in one of the caps, find a body with the matching outlets and gently push the cap over the body. You might need a bit of force, but carefully work your way around in circles, until the cap is nicely seated. Repeat this step for all the remaining bodies.  
+Finally, insert a face in one of the caps, find a body with the matching outlets and gently push the cap over the body. You might need a bit of force, but carefully work your way around in circles, until the cap is nicely seated. Repeat this step for all the remaining bodies. Depending on how your faces turned out, you may want to align them in a way, that all printing lines face the same direction.  
 
 ## Congratulations, you have just finished your very own hexaleaf assembly.
 ![hexaleaf body with diffusor and spacer](./img/finished_off.jpg)
