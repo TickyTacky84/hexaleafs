@@ -184,7 +184,9 @@ To finish everything up, insert the diffusors into all the hexaleafs. Make sure 
 After inserting the diffusors, add a spacer to each hexaleaf, to make sure the diffusor stays in place.  
 Finally, insert a face in one of the caps, find a body with the matching outlets and gently push the cap over the body. You might need a bit of force, but carefully work your way around in circles, until the cap is nicely seated. Repeat this step for all the remaining bodies.  
 
-**Congratulations, you have just finished your very own hexaleaf assembly.**
+## Congratulations, you have just finished your very own hexaleaf assembly.
+![hexaleaf body with diffusor and spacer](./img/finished_off.jpg)
+
 
 # Parts needed for one hexaleaf
 ## Electronics:
