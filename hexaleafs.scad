@@ -320,6 +320,31 @@ module body() {
 
 }
 
+module cableSeperator() {
+    difference(){
+        hSeperator = 1.2;
+        color("white", transparentAlpha) {
+            cylinder(d=dDiffusor, h=hSeperator, $fn = 6);
+        }
+        
+        // cut out spacers from body object
+        wHole = 1.5 * wStripHolder;
+        lHole = 1.5 * lStripHolder;
+        for(i = [60:60:360]) {
+			rotate([0, 0, i])
+			translate([0, dBodyInnerShort / 2 - thStrip - c + 1, 0])
+			translate([-wHole / 2, -lHole, -hSeperator/2])	// center cube for positioning
+				cube([wHole, lHole, 2*hSeperator]);
+        }
+        
+        // cut out one edge to fit cables to LED strip
+        wCube = 20;
+        translate([dDiffusor/2-wCube, -wCube/2, -0.1]){
+            cube([wCube, wCube, wCube]);
+        }
+    }
+}
+
 
 module diffusor() {
 
@@ -508,6 +533,10 @@ module assembled(outlets=outlets, cConnectors=c) {
 
 	body();
 
+    translate([0, 0, hCableGuide + thCableGuide]){
+        cableSeperator();
+    }
+    
 	translate([0, 0, hSpacerDiffusor])
 	//color("blue")
 		diffusor();
@@ -826,6 +855,7 @@ assembled(cConnectors=cConnectors, outlets=[1, 1, 1, 1, 1, 1]);
 *rotate([180, 0, 0]) diffusor();
 *connector(c=cConnectors);
 *connectorBlind(cConnector=cConnectors);
+cableSeperator();
 
 
 *rotate([180, 0, 0]) cap([1, 1, 1, 1, 1, 1]);
