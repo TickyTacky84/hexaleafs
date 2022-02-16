@@ -342,6 +342,10 @@ module cableSeperator() {
         translate([dDiffusor/2-wCube, -wCube/2, -0.1]){
             cube([wCube, wCube, wCube]);
         }
+        // cut out the opposite side for power supply cables
+        translate([-dDiffusor/2, -wCube/2, -0.1]){
+            cube([wCube, wCube, wCube]);
+        }
     }
 }
 
@@ -855,7 +859,7 @@ assembled(cConnectors=cConnectors, outlets=[1, 1, 1, 1, 1, 1]);
 *rotate([180, 0, 0]) diffusor();
 *connector(c=cConnectors);
 *connectorBlind(cConnector=cConnectors);
-cableSeperator();
+*cableSeperator();
 
 
 *rotate([180, 0, 0]) cap([1, 1, 1, 1, 1, 1]);
