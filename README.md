@@ -54,7 +54,7 @@ Example: cap_111111.stl - all 6 sides are accessible / cap_000111.stl - 3 sides 
 This is important as you do not want open holes at the edge of your structure as it may leak light.
 
 #### Clear:
-- 14x [diffusor_5mm.stl](./stl/clearance_0.3mm/diffusor_5mm.stl) - !! 50% infill, rectlinear infill pattern !!
+- 14x [diffusor_5mm.stl](./stl/clearance_0.3mm/diffusor_5mm.stl) - !! 50% infill, cubic infill pattern !!
 - 14x [face_0.8mm.stl](./stl/clearance_0.3mm/face_0.8mm.stl)
 - 14x [spacer_0.8mm.stl](./stl/clearance_0.3mm/spacer_0.8mm.stl)
 - 2x [rhombusFace_0.8mm.stl](./stl/clearance_0.3mm/rhombusFace_0.8mm.stl)
@@ -64,7 +64,7 @@ This is important as you do not want open holes at the edge of your structure as
 Most of the parts don't require specific settings. Just use your default profile.
 
 #### Diffusor
-When printing the diffusor, make sure, to set the infill to 50% rectlinear. This way you get a proper diffusion.
+When printing the diffusor, make sure, to set the infill to 50% cubic. This way you get a proper diffusion.
 
 ---
 ## General Structure of a Hexaleaf
